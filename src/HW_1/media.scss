@@ -1,36 +1,52 @@
-@media screen and (max-width: 574px) and (min-width:320px) {
-  .page-wrapper {
+
+@media screen and (max-width: 768px) and (min-width:575px)  {
+  .main-container__wrapper {
+    top: 30px;
+  }
+}
+
+@media screen and (max-width: 575px)  {
+  .main-container__wrapper {
     top: 30px;
   }
 
-  .items__wrapper {
+  .items__container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .item {
+  .item-content__home,
+  .item-content__contact {
     height: 135px;
     flex-basis: 43.995%;
   }
 
-  .item-hire {
+  .item-content_hire {
     height: 135px;
     flex-basis: 91.735%;
   }
 
-  .item-about {
+  .item-content__photos,
+  .item-content__about {
+
+    height: 135px;
+    flex-basis: 43.995%
+  }
+
+  .item-content__about-item {
     height: 135px;
     flex-basis: 91.735%;
   }
 
-  .item-blog {
+  .item-content__blog{
     height: 135px;
     flex-basis: 91.735%;
   }
 
-  .item-contact {
+  .item-content__contact-item {
+
     height: 135px;
     flex-basis: 91.735%;
   }
