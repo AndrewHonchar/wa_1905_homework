@@ -13,7 +13,7 @@ html {
 body {
   background-image: url("images/pattern.jpg");
   margin: 0;
-
+  height: 100%;
   min-height: 100%;
 }
 
@@ -34,20 +34,76 @@ body {
 
 .items__wrapper{
   width: 100%;
-  display: block;
-}
-
-.items-container {
-  width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 
-.item{
+
+.item-content__home,
+.item-content__content,
+.item-content__photos,
+.item-content__about,
+.item-content__contact{
   width: 120px;
   height: 135px;
   margin: 5px 5px 10px 10px;
   position: relative;
+}
+
+.item-content__hire,
+.item-content__about-large {
+  width: 256px;
+  height: 135px;
+  background-color: lavender;
+  margin: 5px 5px 10px 10px;
+  position: relative;
+}
+
+.item-content__blog {
   display: flex;
+  width: 390px;
+  height: 135px;
+  position: relative;
+  background-color: #1c1c1c;
+  margin: 5px 5px 10px 10px;
+}
+
+
+.item-content__blog img {
+  height: 135px;
+  width: 120px;
+}
+
+.item__header {
+  color: white;
+}
+
+.item-content__home{
+  background-color: #38f;
+}
+
+.item-content__content {
+  background-color: #f9be3e;
+}
+
+.item-content_hire{
+  background-color: rgb(211,87,62);
+}
+
+.item-content__photos{
+  background-color: rgb(89,176,226);
+}
+
+.item-content__about {
+  background-color: rgb(51,175,149);
+}
+
+.item-content__about-large {
+  background-color: rgb(134,167,63);
+}
+
+.item-content__contact {
+  background-color: rgb(126,91,140);
 }
 
 .item__icon  {
@@ -64,78 +120,8 @@ body {
   padding: 10px;
 }
 
-.item__header {
-  color: white;
-}
-
-.item:nth-child(1){
-  background-color: #38f;
-}
-
-.item:nth-child(2) {
-  background-color: #f9be3e;
-}
-
-.item-hire:nth-child(3){
-  background-color: rgb(211,87,62);
-  width: 256px;
-  height: 135px;
-  margin: 5px 5px 10px 10px;
-  position: relative;
-}
-
-.item:nth-child(4){
-  background-color: rgb(89,176,226);
-}
-
-.item:nth-child(5) {
-  background-color: rgb(51,175,149);
-}
-
-.item-about {
-  background-color: rgb(134,167,63);
-  width: 256px;
-  height: 135px;
-  margin: 5px 5px 10px 10px;
-  position: relative;
-}
-
-.item-blog {
-  display: flex;
-  width: 390px;
-  height: 135px;
-  position: relative;
-  background-color: #1c1c1c;
-  margin: 5px 5px 10px 10px;
-}
-
-.item-blog img {
-  height: 135px;
-  width: 120px;
-}
-
 .item__header_blog {
   color: #fff;
   margin: 10px 0 0 10px;
   line-height: 20px;
 }
-.item-contact {
-  background-color: rgb(126,91,140);
-  width: 120px;
-  height: 135px;
-  margin: 5px 5px 10px 10px;
-}
-
-.item-contact__icon {
-  padding-top: 45px;
-  padding-left: 28px;
-  margin-bottom: 10px;
-}
-
-.item-contact__text{
-  color: white;
-  padding: 10px;
-}
-
-
-
