@@ -33,14 +33,13 @@ body {
 }
 
 .items__wrapper{
-  width: 100%;
-  display: block;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
 }
 
-.items-container {
-  width: 100%;
-  display: flex;
-}
+
 
 .item{
   width: 120px;
@@ -124,6 +123,7 @@ body {
   width: 120px;
   height: 135px;
   margin: 5px 5px 10px 10px;
+  position: relative;
 }
 
 .item-contact__icon {
