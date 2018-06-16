@@ -1,0 +1,12 @@
+@import './variables';
+
+@mixin pageContainer {
+  max-width: 1257px;
+  margin: 0 auto;
+  padding: 0 $page-container-padding;
+}
+
+@mixin FlexCenterVertical {
+  display: flex;
+  align-items: center;
+}
