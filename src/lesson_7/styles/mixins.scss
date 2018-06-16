@@ -1,4 +1,4 @@
-@import './variables';
+@import './variables.scss';
 
 @mixin pageContainer {
   max-width: 1257px;
@@ -6,7 +6,7 @@
   padding: 0 $page-container-padding;
 }
 
-@mixin FlexCenterVertical {
+@mixin flexCenterVertical {
   display: flex;
   align-items: center;
 }

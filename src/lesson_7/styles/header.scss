@@ -1,12 +1,11 @@
-@import "../styles/variables.scss";
+@import './variables.scss';
 @import './mixins.scss';
 
 
 $navbar-height: 58px;
-$page-nav-item-margin: 30px;
+$page-nav-item-margin: 36px;
 $page-nav-link-color: #ffffff;
 $logo-font-size: 26px;
-
 
 
 .page-header {
@@ -14,7 +13,7 @@ $logo-font-size: 26px;
 }
 
 .page-nav {
-  height:$navbar-height;
+  height: $navbar-height;
   display: flex;
   justify-content: space-between;
   @include pageContainer;
@@ -22,7 +21,7 @@ $logo-font-size: 26px;
     color: $page-nav-link-color;
     font-size: $logo-font-size;
     font-weight: normal;
-    @include FlexCenterVertical;
+    @include flexCenterVertical;
   }
   &__toggle {
     display: none;
@@ -33,12 +32,14 @@ $logo-font-size: 26px;
   }
   &__item {
     margin: 0 $page-nav-item-margin;
+    display: flex;
   }
   &__link {
     color: $page-nav-link-color;
-    @include FlexCenterVertical;
+    @include flexCenterVertical;
     justify-content: center;
   }
+
 }
 
 .account-panel {
@@ -52,13 +53,44 @@ $logo-font-size: 26px;
 .baner {
   display: flex;
   justify-content: space-between;
-    &__img {
+  align-items: center;
+  @include pageContainer;
+
+
+  &__info {
+    width: 563px;
+    height: 403px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__header {
+    font-weight: normal;
+    font-size: 48px;
+    color: $page-nav-link-color;
+    width: 512px;
+    height: 114px;
+  }
+  &__about {
+    font-weight: normal;
+    font-size: $base-font-size;
+    color: $page-nav-link-color;
+    width: 553px;
+    height: 128px;
+    line-height: 2;
+  }
+  &__img {
     width: 463px;
     height: 792px;
-    background-image: url('../assets/images/artboard.png');
-
+    background-image: url("../../assets/images/artboard.png");
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+  }
+  &__btn {
+    width: 200px;
+    height: 60px;
   }
 }
+
+
