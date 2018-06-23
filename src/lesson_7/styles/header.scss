@@ -55,9 +55,7 @@ $logo-font-size: 26px;
   justify-content: space-between;
   align-items: center;
   @include pageContainer;
-
-
-  &__info {
+    &__info {
     width: 563px;
     height: 403px;
     display: flex;

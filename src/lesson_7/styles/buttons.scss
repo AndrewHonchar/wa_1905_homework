@@ -1,6 +1,7 @@
 @import "../styles/variables.scss";
 
 .btn {
+  cursor: pointer;
   border: none;
   background-color: transparent;
   color: $btn-default-font-color;
@@ -9,6 +10,7 @@
   border-bottom-right-radius: $border-bottom-right-radius;
   font-size: $base-font-size;
   &_success {
+    cursor: pointer;
     background-color: #1fdb84;
     box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
   }
