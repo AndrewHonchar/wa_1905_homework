@@ -141,12 +141,6 @@ li {
   .benefits__container {
     display: -ms-flexbox;
     display: flex; }
-    @media (max-width: 719.9px) {
-      .benefits__container {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
   .benefits__content {
     width: 300px;
     height: 288px;
@@ -187,13 +181,12 @@ li {
   .paid-plan__btn {
     width: 162px;
     height: 60px;
-    border-radius: 5px;
     background-color: #ffffff;
     border: solid 1px #aefdd9; }
   .paid-plan__btn_success {
     width: 360px;
     height: 60px;
-    border-radius: 5px;
+    margin-left: -14px;
     background-color: #1fdb84;
     border: solid 1px #aefdd9; }
 

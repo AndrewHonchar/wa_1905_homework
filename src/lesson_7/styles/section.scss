@@ -19,10 +19,6 @@
   margin-top: -91px;
   &__container {
     display: flex;
-    @include mobile {
-    display: flex;
-      flex-direction: column;
-    }
   }
 
   &__content {
@@ -72,14 +68,13 @@
   &__btn {
     width: 162px;
     height: 60px;
-    border-radius: 5px;
     background-color: #ffffff;
     border: solid 1px #aefdd9;
   }
   &__btn_success {
     width: 360px;
     height: 60px;
-    border-radius: 5px;
+    margin-left: -14px;
     background-color: #1fdb84;
     border: solid 1px #aefdd9;
   }
