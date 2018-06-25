@@ -19,6 +19,10 @@
   margin-top: -91px;
   &__container {
     display: flex;
+    @include mobile {
+    display: flex;
+      flex-direction: column;
+    }
   }
 
   &__content {

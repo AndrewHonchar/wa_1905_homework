@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 330);
+/******/ 	return __webpack_require__(__webpack_require__.s = 333);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9037,24 +9037,91 @@ module.exports = function (regExp, replace) {
 /* 327 */,
 /* 328 */,
 /* 329 */,
-/* 330 */
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(331);
+module.exports = __webpack_require__(334);
 
 
 /***/ }),
-/* 331 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(332);
+__webpack_require__(335);
+
+var _lighter = __webpack_require__(336);
+
+(0, _lighter.lighter)();
+
+var lighterElement = document.querySelector('#lighter');
+var lighterElement2 = document.querySelector('#lighter2');
+var lighterElement3 = document.querySelector('#lighter3');
+
+(0, _lighter.lighter)(lighterElement);
+(0, _lighter.lighter)(lighterElement2);
+(0, _lighter.lighter)(lighterElement3);
 
 /***/ }),
-/* 332 */
+/* 335 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 336 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.lighter = lighter;
+
+__webpack_require__(337);
+
+function lighter(lighterElement) {
+    var lights = document.querySelectorAll('.street-lighter__light');
+
+    function switchOff() {
+        for (var i = 0; i < lights.length; i++) {
+            var light = lights[i];
+            light.classList.remove('street-lighter__light_active');
+        }
+    }
+
+    function switchOn(element) {
+        console.log('ENABLED');
+        element.classList.add('street-lighter__light_active');
+    }
+
+    function clickHandler(element) {
+        switchOff();
+        switchOn(element);
+    }
+
+    var _loop = function _loop(i) {
+        var light = lights[i];
+        light.addEventListener('click', function () {
+            clickHandler(light);
+        });
+    };
+
+    for (var i = 0; i < lights.length; i++) {
+        _loop(i);
+    }
+}
+
+/***/ }),
+/* 337 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
