@@ -135,16 +135,23 @@ li {
   z-index: 2;
   position: relative;
   margin-top: -91px; }
-  @media (max-width: 719.9px) {
-    .benefits {
-      background-color: red; } }
   .benefits__container {
     display: -ms-flexbox;
     display: flex; }
+    @media (max-width: 719.9px) {
+      .benefits__container {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        width: 200px; } }
   .benefits__content {
     width: 300px;
     height: 288px;
     margin: 66px 76px 66px 60px; }
+    @media (max-width: 719.9px) {
+      .benefits__content {
+        width: 200px; } }
   .benefits__icon {
     width: 72px;
     height: 72px; }
@@ -168,7 +175,8 @@ li {
 .paid-plan {
   width: 1257px;
   height: 900px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 100px; }
   .paid-plan__header {
     width: 880px;
     height: 128px;
@@ -236,7 +244,7 @@ li {
     color: #5b6c94;
     line-height: 2; }
   .license-content__description {
-    margin-top: 105px; }
+    margin-top: 85px; }
   .license-content__btn {
     margin-top: 10px;
     margin-left: 60px;
