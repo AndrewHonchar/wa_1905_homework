@@ -29,6 +29,9 @@ $logo-font-size: 26px;
   &__menu {
     display: flex;
     justify-content: center;
+    @include mobile {
+      display: none;
+    }
   }
   &__item {
     margin: 0 $page-nav-item-margin;
@@ -39,7 +42,6 @@ $logo-font-size: 26px;
     @include flexCenterVertical;
     justify-content: center;
   }
-
 }
 
 .account-panel {
@@ -55,12 +57,17 @@ $logo-font-size: 26px;
   justify-content: space-between;
   align-items: center;
   @include pageContainer;
-    &__info {
-    width: 563px;
-    height: 403px;
+  @include mobile {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+  }
+  &__info {
+  width: 563px;
+  height: 403px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   }
   &__header {
     font-weight: normal;
@@ -68,6 +75,14 @@ $logo-font-size: 26px;
     color: $page-nav-link-color;
     width: 512px;
     height: 114px;
+    @include mobile {
+      width: 52%;
+      height: 80px;
+      display: flex;
+      margin: 0 auto;
+      margin-top: 15px;
+      font-size: 30px;
+    }
   }
   &__about {
     font-weight: normal;
@@ -76,6 +91,11 @@ $logo-font-size: 26px;
     width: 553px;
     height: 128px;
     line-height: 2;
+    @include mobile {
+      width: 50%;
+      display: flex;
+      margin: 0 auto;
+    }
   }
   &__img {
     width: 463px;
@@ -84,10 +104,18 @@ $logo-font-size: 26px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    @include mobile {
+      display: none;
+    }
   }
   &__btn {
     width: 200px;
     height: 60px;
+    @include mobile {
+      width: 40%;
+      display: block;
+      margin: 10px auto;
+    }
   }
 }
 

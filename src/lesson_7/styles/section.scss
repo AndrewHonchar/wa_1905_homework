@@ -3,21 +3,27 @@
 
 .benefits {
   display: flex;
-  margin: 0 auto 200px auto;
-  width: 1257px;
+  margin: -91px auto 100px auto;
+  width: 100%;
   height: 420px;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
   z-index: 2;
   position: relative;
-  margin-top: -91px;
+  @include mobile {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
   &__container {
     display: flex;
     @include mobile {
       display: flex;
       flex-direction: column;
-      width: 200px;
     }
   }
     &__content {
@@ -25,7 +31,7 @@
       height: 288px;
       margin: 66px 76px 66px 60px;
       @include mobile {
-        width: 200px;
+        margin: 26px 36px 26px 35px;
       }
     }
     &__icon {
@@ -50,29 +56,47 @@
       font-size: $base-font-size;
       color: #5b6c94;
       line-height: 2;
+      @include mobile {
+        width: 92%;
+        font-size: 16px;
+      }
     }
   }
 
   .paid-plan {
     width: 1257px;
-    height: 900px;
+    height: 940px;
     margin: 0 auto;
     margin-bottom: 100px;
+    @include mobile {
+      width: 100%;
+    }
     &__header {
       width: 880px;
-      height: 128px;
+      height: 200px;
       font-size: 38px;
       font-weight: bold;
-      line-height: 1.6;
+      line-height: 1.7;
       text-align: center;
       color: #32325c;
       margin: 0 auto;
+      @include mobile {
+        width: 100%;
+        font-size: 18px;
+        margin: 30px auto;
+      }
     }
     &__btn {
       width: 162px;
       height: 60px;
       background-color: #ffffff;
       border: solid 1px #aefdd9;
+      @include mobile {
+        width: 30%;
+        height: 20%;
+        font-size: 70%;
+        margin-top: 40px;
+      }
     }
     &__btn_success {
       width: 360px;
@@ -80,6 +104,12 @@
       margin-left: -14px;
       background-color: #1fdb84;
       border: solid 1px #aefdd9;
+      @include mobile {
+        width: 55%;
+        height: 20%;
+        font-size: 70%;
+        color: white;
+      }
     }
   }
 
@@ -88,7 +118,12 @@
     height: 700px;
     display: flex;
     justify-content: space-between;
-    margin: 120px auto;
+    margin: 70px auto;
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 
   .license-content {
@@ -99,6 +134,11 @@
     background-color: white;
     box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
     margin: 0 auto;
+    @include mobile {
+      width: 100%;
+      margin: 0 auto;
+      border-top: 1px solid lightblue;
+    }
     &__header {
       margin-top: 53px;
       font-size: 24px;
@@ -132,7 +172,7 @@
       line-height: 2;
     }
     &__description {
-      margin-top: 85px;
+      margin-top: 65px;
     }
     &__btn {
       margin-top: 10px;
@@ -140,6 +180,10 @@
       width: 255px;
       height: 60px;
       border-radius: 5px;
+      @include mobile {
+        width: 63%;
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -154,18 +198,28 @@
     height: 970px;
     margin: 0 auto;
     display: flex;
+    @include mobile {
+      margin-top: 529px;
+    }
   }
 
   .customers-header {
     width: 523px;
     height: 970px;
     background-color: white;
+    @include mobile {
+      display: none;
+    }
   }
 
   .customers-slides {
     width: 724px;
     height: 970px;
     background-color: #313a5a;
+    @include mobile {
+      width: 25.5%;
+      height: 620px;
+    }
   }
 
   .wrapper {
@@ -173,6 +227,11 @@
     margin: 200px auto 0;
     position: relative;
     width: 420px;
+    @include mobile {
+      width: 100%;
+      padding-top: 45px;
+      margin: 0 auto;
+    }
   }
 
   .slider {
@@ -186,7 +245,11 @@
     -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
     -o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
     box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    @include mobile {
+      width: 100%;
+    }
   }
+
   .wrapper > input {
     display: none;
   }
@@ -205,6 +268,10 @@
     font-weight: normal;
     line-height: 2;
     color: white;
+    @include mobile {
+      font-size: 14px;
+      padding: 141px 50px 141px 40px;
+    }
   }
   .slide2 {
     background-color: white;
@@ -215,6 +282,10 @@
     font-weight: normal;
     line-height: 2;
     color: #5b6c94;
+    @include mobile {
+      font-size: 14px;
+      padding: 141px 50px 141px 40px;
+    }
   }
   .slide3 {
     background-color: #1fdb84;
@@ -225,6 +296,10 @@
     font-weight: normal;
     line-height: 2;
     color: white;
+    @include mobile {
+      font-size: 14px;
+      padding: 141px 50px 141px 40px;
+    }
   }
   .slide4 {
     background-color: white;
@@ -235,6 +310,10 @@
     font-weight: normal;
     line-height: 2;
     color: #5b6c94;
+    @include mobile {
+      font-size: 14px;
+      padding: 141px 50px 141px 40px;
+    }
   }
   .slide5 {
     background-color: #1fdb84;
@@ -245,6 +324,10 @@
     font-weight: normal;
     line-height: 2;
     color: white;
+    @include mobile {
+      font-size: 14px;
+      padding: 141px 50px 141px 40px;
+    }
   }
 
   .wrapper .controls {
@@ -341,6 +424,10 @@
     height: 510px;
     margin: 0 auto;
     background-color: white;
+    @include mobile {
+      width: 100%;
+      margin: -420px auto;
+    }
   }
   .footer-container__logo {
     max-width: 1000px;
@@ -348,6 +435,10 @@
     margin: 0 auto;
     & img {
       padding-right: 25px;
+    }
+    @include mobile {
+      padding: 0 10px 15px 30px;
+      margin-bottom: 30px;
     }
   }
 
