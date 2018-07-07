@@ -1,0 +1,61 @@
+.lamp {
+  display: flex;
+  width: 490px;
+  margin: 20px auto;
+  margin-top: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.street-lighter {
+  display: flex;
+  width: 490px;
+  margin: 20px auto;
+  margin-top: 100px;
+  justify-content: space-between;
+  align-items: center;
+  &__light {
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 50%;
+    &_red {
+      &.street-lighter__light_active {
+        background-color: red;
+      }
+    }
+    &_yellow {
+      &.street-lighter__light_active {
+        background-color: yellow;
+      }
+    }
+    &_green {
+      &.street-lighter__light_active {
+        background-color: lightblue;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 420px;
+  margin: 0 auto;
+  cursor: pointer;
+  color: grey;
+}
+.btn {
+  width: 60px;
+  height: 30px;
+  margin: 20px auto;
+  border: 1px solid aqua;
+  &_green {
+    &.btn_active {
+      background-color: lightgreen;
+    }
+  }
+}
+
+
