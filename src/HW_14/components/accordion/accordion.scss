@@ -1,0 +1,32 @@
+.accordion {
+  width: 600px;
+  margin: 0 auto;
+  transition: 1s;
+  &__button {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #eee;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    border: none;
+    outline: none;
+    color: grey;
+  }
+  &__active {
+    .accordion__panel {
+      max-height: 100px;
+    }
+  }
+}
+
+.accordion__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.accordion__button:hover {
+  background-color: #ccc;
+  transition: 0.4s;
+}

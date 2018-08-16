@@ -7,26 +7,29 @@
              <title>Document</title>
 </head>
 <body>
-<button>CHECK BUTTON</button>
-<div class="street-lighter">
-    <div class="lamp">
-       <div class="street-lighter__light street-lighter__light_red"></div>
-       <div class="btn btn_green">on/off</div>
-    </div>
-    <div class="lamp">
-         <div class="street-lighter__light street-lighter__light_red"></div>
-         <div class="btn btn_green" id="btn1">on/off</div>
-    </div>
-    <div class="lamp">
-         <div class="street-lighter__light street-lighter__light_red"></div>
-         <div class="btn btn_green" id="btn1">on/off</div>
-    </div>
+
+<div class="bulb" id="bulb1">
+    <div class="bulb__lighter"></div>
+    <button class="bulb__control">toggle</button>
+</div>
+<div class="bulb" id="bulb2">
+    <div class="bulb__lighter"></div>
+    <button class="bulb__control">toggle</button>
 </div>
 
-  <div class="lamp">
-       <div class="street-lighter__light street-lighter__light_red"></div>
-       <div class="btn btn_green" id="btn1">on/off</div>
+<div class="garland" id="garland1">
+  <div class="garland__lamps">
+    <div class="bulb" id="bulb3">
+      <div class="bulb__lighter"></div>
+      <button class="bulb__control">Toggle</button>
     </div>
+    <div class="bulb" id="bulb4">
+      <div class="bulb__lighter"></div>
+      <button class="bulb__control">Toggle</button>
+    </div>
+  </div>
+  <button class="garland__control">Add</button>
+</div>
 
 </body>
 </html>
