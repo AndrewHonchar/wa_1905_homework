@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 361);
+/******/ 	return __webpack_require__(__webpack_require__.s = 384);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9060,7 +9060,12 @@ module.exports = function (regExp, replace) {
 /* 350 */,
 /* 351 */,
 /* 352 */,
-/* 353 */,
+/* 353 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 354 */,
 /* 355 */,
 /* 356 */,
@@ -9068,27 +9073,134 @@ module.exports = function (regExp, replace) {
 /* 358 */,
 /* 359 */,
 /* 360 */,
-/* 361 */
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(362);
+module.exports = __webpack_require__(385);
 
 
 /***/ }),
-/* 362 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(363);
+__webpack_require__(386);
+
+__webpack_require__(353);
+
+var _accordion = __webpack_require__(387);
+
+var accordion = new _accordion.Accordion(document.querySelector('#accordion1'));
+var accordion2 = new _accordion.Accordion(document.querySelector('#accordion2'));
+var accordion3 = new _accordion.Accordion(document.querySelector('#accordion3'));
 
 /***/ }),
-/* 363 */
+/* 386 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 387 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Accordion = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(353);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SELECT_CLASS_NAME = 'accordion';
+var SELECT_BUTTON_CLASS_NAME = 'accordion__button';
+var SELECT_PANEL_CLASS_NAME = 'accordion__panel';
+var SELECT_ACTIVE_CLASS_NAME = 'accordion__active';
+
+var Accordion = exports.Accordion = function () {
+    function Accordion(target) {
+        var _this = this;
+
+        _classCallCheck(this, Accordion);
+
+        this.target = target;
+        this.isEnabled = false;
+        this.render();
+        this.button.addEventListener('click', function () {
+            return _this.toggle();
+        });
+    }
+
+    _createClass(Accordion, [{
+        key: 'accordionAdd',
+        value: function accordionAdd() {
+            this.target.classList.add(SELECT_ACTIVE_CLASS_NAME);
+            this.isEnabled = true;
+        }
+    }, {
+        key: 'accordionRemove',
+        value: function accordionRemove() {
+            this.target.classList.remove(SELECT_ACTIVE_CLASS_NAME);
+            this.isEnabled = false;
+        }
+    }, {
+        key: 'toggle',
+        value: function toggle() {
+            if (this.isEnabled) {
+                this.accordionRemove();
+            } else {
+                this.accordionAdd();
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            this.button = document.createElement('button');
+            this.panel = document.createElement('div');
+            this.panel.classList.add(SELECT_PANEL_CLASS_NAME);
+            this.button.classList.add(SELECT_BUTTON_CLASS_NAME);
+            this.button.textContent = 'Accordion';
+            this.panel.textContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+            this.target.appendChild(this.button);
+            this.target.appendChild(this.panel);
+            this.target.classList.add(SELECT_CLASS_NAME);
+        }
+    }]);
+
+    return Accordion;
+}();
 
 /***/ })
 /******/ ]);

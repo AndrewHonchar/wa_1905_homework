@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 361);
+/******/ 	return __webpack_require__(__webpack_require__.s = 369);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9068,27 +9068,141 @@ module.exports = function (regExp, replace) {
 /* 358 */,
 /* 359 */,
 /* 360 */,
-/* 361 */
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(362);
+module.exports = __webpack_require__(370);
 
 
 /***/ }),
-/* 362 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(363);
+//1st assignment
 
-/***/ }),
-/* 363 */
-/***/ (function(module, exports) {
+function randomInteger(min, max) {
+    var rand = min + Math.random() * (max + 1 - min);
+    rand = Math.floor(rand);
+    return rand;
+}
 
-// removed by extract-text-webpack-plugin
+console.log(randomInteger(1, 10));
+
+//2nd assignment
+
+var user = {};
+user.name = 'Вася';
+user.surname = 'Петров';
+user.name = 'Сергей';
+delete user.name;
+
+console.log(user);
+
+//3rd assignment
+
+function isEmpty(obj) {
+    for (var key in obj) {
+        return false;
+    }
+    return true;
+}
+
+var schedule = {};
+console.log(isEmpty(schedule));
+schedule["8:30"] = "подъём";
+console.log(isEmpty(schedule));
+
+//4th assignment
+
+var salaries = {
+    John: 400,
+    Jack: 200,
+    Luisa: 800,
+    Lola: 1200
+};
+
+var calc = 0;
+for (var name in salaries) {
+    calc += salaries[name];
+}
+
+console.log(calc);
+
+//5th assignment
+
+var money = {
+    John: 400,
+    Jack: 200,
+    Luisa: 800,
+    Lola: 1200
+};
+
+var max = 0;
+var maxName = "";
+for (var _name in money) {
+    if (max < money[_name]) {
+        max = money[_name];
+        maxName = _name;
+    }
+}
+
+console.log(maxName || "нет сотрудников");
+
+//6th assignment
+
+var menu = {
+    width: 200,
+    height: 600,
+    title: "Menu"
+};
+
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+function multiplyNumeric(obj) {
+    for (var key in obj) {
+        if (isNumeric(obj[key])) {
+            obj[key] *= 2;
+        }
+    }
+}
+
+multiplyNumeric(menu);
+
+console.log("width=" + menu.width + " height=" + menu.height + " title=" + menu.title);
+
+//8th assignment
+
+var numbers = [];
+
+while (true) {
+
+    var value = prompt("Введите число", 0);
+
+    if (value === "" || value === null || isNaN(value)) break;
+
+    numbers.push(+value);
+}
+
+var sum = 0;
+for (var i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+}
+
+console.log(sum);
 
 /***/ })
 /******/ ]);
