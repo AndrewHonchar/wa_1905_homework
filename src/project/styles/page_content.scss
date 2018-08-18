@@ -1,0 +1,251 @@
+@import "../styles/mixins";
+
+.page-content {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  border-top: 1px solid #d0d4d8;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+  }
+  &__header {
+    margin: 70px auto 40px auto;
+    font-family: Georgia;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4e5665;
+    @include mobile {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__info {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 970px;
+    height: 100%;
+    font-family: AvenirNext;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: #505050;
+    @include mobile {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__icon {
+    width: 100%;
+    max-width: 970px;
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d0d4d8;
+    @include mobile {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__icon-wrapper {
+    width: 100px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.icon-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+  }
+  &__numbers {
+    width: 100%;
+    height: 100%;
+    font-family: AvenirNext;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: #4e5665;
+    @include mobile {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__text {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #909090;
+    @include mobile {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.readmore {
+  color: #ecb84c;
+  font-size: 16px;
+}
+
+.readmore:hover {
+  color: salmon;
+  transition: 0.4s;
+}
+
+.image {
+  margin: 64px 235px 101px 235px;
+  width: 970px;
+  height: 430px;
+  display: flex;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &__background-street {
+    width: 470px;
+    height: 289px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    margin: 70px 0 70px 0;
+    margin-right: -70px;
+    @include mobile {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+  }
+  &__header {
+    width: 220px;
+    margin: 40px 227px 0 40px;
+    font-family: Georgia;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.04;
+    letter-spacing: normal;
+    color: #4e5665;
+  }
+  &__description {
+    margin: 16px 40px 40px 40px;
+    font-family: AvenirNext;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: #505050;
+    @include mobile {
+      margin: 16px 10px 10px 10px;
+      padding: 20px;
+      font-family: AvenirNext;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.75;
+      letter-spacing: normal;
+      color: #505050;
+    }
+  }
+  &__street {
+    width: 570px;
+    height: 428px;
+    object-fit: contain;
+    z-index: 1;
+    background-image: url("../../../assets/images/image_street.png");
+    @include mobile {
+      background-image: url("../../../assets/images/image_street.png");
+      width: 100%;
+    }
+  }
+  &__background-beach {
+    width: 470px;
+    height: 289px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    margin: 70px 0 70px 0;
+    margin-left: -70px;
+    @include mobile {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+  }
+  &__beach img{
+    width: 570px;
+    height: 428px;
+    object-fit: contain;
+    z-index: 1;
+    border-radius: 4px;
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.image-background__border:before {
+  content: "";
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  border-top: 2px solid #ecb84c;
+  border-left: 2px solid #ecb84c;
+  margin: 19px 0 0 19px;
+}
+
+.image-background__border:after {
+  content: "";
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  border-bottom: 2px solid #ecb84c;
+  border-right: 2px solid #ecb84c;
+  margin: 237px 0 0 416px;
+  @include mobile {
+    content: "";
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    border-bottom: 2px solid #ecb84c;
+    border-right: 2px solid #ecb84c;
+    margin: 237px 0 0 356px;
+  }
+}

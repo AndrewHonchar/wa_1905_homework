@@ -1,0 +1,117 @@
+@import "../styles/mixins";
+
+.slider-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  height: 900px;
+  margin: 80px auto;
+  @include mobile {
+    width: 100%;
+    margin: 20px 0 50px 0;
+  }
+}
+.slider__header {
+  width: 215px;
+  height: 38px;
+  margin: 0 auto;
+  font-family: Georgia;
+  font-size: 32px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: center;
+  color: #4e5665;
+}
+.slider__description {
+  width: 100%;
+  max-width: 970px;
+  height: 112px;
+  margin: 42px auto;
+  font-family: AvenirNext;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  color: #505050;
+  @include mobile {
+    width: 100%;
+    height: 182px;
+    margin: 42px auto;
+    font-family: AvenirNext;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: #505050;
+  }
+}
+.slider__divider {
+  width: 270px;
+  height: 1px;
+  margin: 50px auto;
+  opacity: 0.5;
+  background-color: #d0d4d8;
+  @include mobile {
+    display: none;
+  }
+}
+
+.slider {
+  max-width: 700px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  @include mobile {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+#slides{
+  position: relative;
+  height: 150px;
+  margin: 0 auto;
+  list-style-type: none;
+  @include mobile {
+    width: 100%;
+    margin: 150px 0 0 0;
+  }
+}
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  margin: 0 auto;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  @include mobile {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.slide img {
+  @include mobile {
+    width: 90%;
+    margin: 0 0 -40px 0;
+  }
+}
+
+.showing{
+  opacity: 1;
+  z-index: 2;
+}

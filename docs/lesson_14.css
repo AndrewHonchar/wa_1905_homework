@@ -1,0 +1,69 @@
+.bulb {
+  width: 50px;
+  margin-bottom: 20px; }
+  .bulb__lighter {
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; }
+  .bulb_active .bulb__lighter {
+    background-color: red; }
+  .bulb_active .bulb__button_control {
+    background-color: yellow; }
+.garland__output {
+  border: 1px solid green; }
+.select {
+  position: relative;
+  border: 1px solid red;
+  width: 220px; }
+  .select__title {
+    border: none;
+    background: transparent;
+    display: inline-block;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px; }
+  .select__options {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 #00000066;
+    -ms-transform: scaleY(0);
+        transform: scaleY(0);
+    visibility: hidden;
+    transition: all 0.5s;
+    -ms-transform-origin: top center;
+        transform-origin: top center; }
+  .select__control {
+    border: none;
+    background: transparent;
+    display: inline-block;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: 10px; }
+  .select_expand .select__options {
+    -ms-transform: scaleY(1);
+        transform: scaleY(1);
+    visibility: visible; }
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 14px;
+  font-family: sans-serif; }
+
+body, ul, ol, h1, h2, h3, h4, h5, hr, p, figure {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }

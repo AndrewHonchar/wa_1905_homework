@@ -1,0 +1,112 @@
+@import "../styles/mixins";
+
+.page-header {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  height: 700px;
+  background-image: url("../../../assets/images/Cuba_header.png");
+  @include mobile {
+      background-image: url("../../../assets/images/header_mobile.png");
+      width: 100%;
+      max-width: 720px;
+  }
+  &__name {
+    margin: 0 auto;
+    padding-top: 237px;
+    width: 100%;
+    max-width: 527px;
+    height: 227px;
+    font-family: Georgia;
+    font-size: 200px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    @include mobile {
+      width: 100%;
+      height: 127px;
+      font-family: Georgia;
+      font-size: 150px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+  &__description {
+    margin: 0 auto;
+    padding-top: 180px;
+    width: 100%;
+    max-width: 406px;
+    height: 27px;
+    font-family: Georgia;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+    @include mobile {
+      margin: 0 auto;
+      padding-top: 260px;
+      width: 100%;
+      height: 27px;
+      font-family: Georgia;
+      font-size: 22px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.page-nav {
+  height: 45px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @include mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu {
+    display: inline;
+    height: 24px;
+    margin: 0 30px 0 30px;
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    @include mobile {
+      width: 100%;
+      height: 100%;
+      margin: 0 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+.page-nav__menu:hover {
+  border-bottom: 3px solid #ecb84c;
+}

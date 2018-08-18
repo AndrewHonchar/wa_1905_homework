@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 338);
+/******/ 	return __webpack_require__(__webpack_require__.s = 371);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9045,95 +9045,218 @@ module.exports = function (regExp, replace) {
 /* 335 */,
 /* 336 */,
 /* 337 */,
-/* 338 */
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(339);
+module.exports = __webpack_require__(372);
 
 
 /***/ }),
-/* 339 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(340);
+var _bulb = __webpack_require__(373);
 
-//function greeting() {
-//    console.log (this);
-//    console.log('Hello my name is, ' +this.name);
-//}
-//
-//function Person(name, age) {
-//    this.name = name;
-//    this.age = age;
-//    this.greet = greeting;
-//}
-//
-//const person = new Person('Jeff', 30);
-//const person2 = new Person('Bob', 20);
-//
-//person.greet();
-//person2.greet();
-//debugger;
+var _garland = __webpack_require__(375);
 
-
-function Developer(name, age, lang) {
-    this.name = name;
-    this.age = age;
-    this.lang = lang;
-    this.develop = function () {
-        console.log('Written code at ' + this.lang);
-    };
-}
-
-var js = new Developer('Jack', 22, 'js');
-var net = new Developer('Sam', 25, 'net');
-var c = new Developer('Sam', 25, 'c');
-
-js.develop();
-net.develop();
-c.develop();
-
-//const products = [
-//    {
-//        title: 'test',
-//        price: '4500'
-//    },
-//    {
-//        title: 'test',
-//        price: '2500'
-//    },
-//    {
-//        title: 'test',
-//        price: '3500'
-//    },
-//];
+// import {Lighter} from './components/lighter/lighter';
+// import {Buttons} from './components/lighter/lighter';
 //
-//function calcTotal(param) {
-//    let total = 0;
+// const firstLighter = new Lighter(document.querySelectorAll('.lamp'));
+// const firstbtn = new Buttons(document.querySelector('#btn1'));
+
+var bulb = new _bulb.Bulb(document.querySelector('#bulb1'));
+var bulb2 = new _bulb.Bulb(document.querySelector('#bulb2'));
+var garland = new _garland.Garland(document.querySelector('#garland1'), [new _bulb.Bulb(document.querySelector('#bulb3')), new _bulb.Bulb(document.querySelector('#bulb4'))]);
+
+// class LighterManager {
+//     constructor (button, arrayOfLighters) {
+//         this.button = button;
+//         this.lighters = arrayOfLighters;
+//         this.attachEvents();
+//         this.button.addEventListener('click', ()=> {
+//             console.log(this.lighters[0].isEnabled);
+//         });
 //
-//    for(let i=0; i < param.length; i++) {
-//        console.log(param[i].price);
-//        const number = Number(param[i]);
-//        if(isNaN(number) === false) {
-//            total += number;
-//        }
-//    }
-//    return total;
-//}
+//     }
+// }
 //
 //
-//const totalPrice = calcTotal(products);
-//console.log(totalPrice);
+// const o = new Lighter();
+// const u = new LighterManager(document.querySelector('button'),[firstLighter]);
+// //
+// //
+// class ButtonsManager {
+//     constructor (button, arrayOfButtons) {
+//         this.button = button;
+//         this.buttons = arrayOfButtons;
+//
+//         this.button.addEventListener('click', ()=> {
+//             console.log(this.buttons[0].isEnabled);
+//         })
+//     }
+// }
+//
+// const w = new ButtonsManager(document.querySelector('button'),[firstbtn]);
+//
+//
+//
+// // const Lights = [LightOn, LightOff];
 
 /***/ }),
-/* 340 */
+/* 373 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Bulb = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(374);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Bulb = exports.Bulb = function () {
+    function Bulb(targetEl) {
+        var _this = this;
+
+        _classCallCheck(this, Bulb);
+
+        this.target = targetEl;
+        this.control = targetEl.querySelector('.bulb__control');
+        this.lighter = targetEl.querySelector('.bulb__lighter');
+        console.log(this);
+        this.isEnabled = false;
+        console.log(this);
+        this.control.addEventListener('click', function () {
+            return _this.toggle();
+        });
+    }
+
+    _createClass(Bulb, [{
+        key: 'switchOn',
+        value: function switchOn() {
+            this.target.classList.add('bulb_active');
+            this.isEnabled = true;
+        }
+    }, {
+        key: 'switchOff',
+        value: function switchOff() {
+            this.target.classList.remove('bulb_active');
+            this.isEnabled = false;
+        }
+    }, {
+        key: 'toggle',
+        value: function toggle() {
+            if (this.isEnabled) {
+                this.switchOff();
+            } else {
+                this.switchOn();
+            }
+        }
+    }]);
+
+    return Bulb;
+}();
+
+/***/ }),
+/* 374 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 375 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Garland = exports.Garland = function () {
+    function Garland(targetEl, bulbs) {
+        var _this = this;
+
+        _classCallCheck(this, Garland);
+
+        this.targetEl = targetEl;
+        this.bulbs = bulbs;
+        this.control = targetEl.querySelector('.garland__control');
+        this.control.addEventListener('click', function () {
+            return _this.toggleAll();
+        });
+    }
+
+    _createClass(Garland, [{
+        key: 'toggleAll',
+        value: function toggleAll() {
+            var enabledElements = this.bulbs.filter(function (bulb) {
+                return bulb.isEnabled === true;
+            });
+            console.log(enabledElements);
+            if (enabledElements.length > 0) {
+                this.bulbs.forEach(function (bulb) {
+                    bulb.switchOff();
+                });
+            } else {
+                this.bulbs.forEach(function (bulb) {
+                    bulb.switchOn();
+                });
+            }
+        }
+    }]);
+
+    return Garland;
+}();
 
 /***/ })
 /******/ ]);

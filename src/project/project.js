@@ -1,12 +1,10 @@
 import './project.scss';
+import './styles/header.scss';
+import './styles/page_content.scss';
+import './styles/car_content.scss';
+import './styles/slider.scss';
+import './styles/footer.scss';
+import './styles/mixins.scss'
 import './slider/slider.js';
 
-var slides = document.querySelectorAll('#slides .slide');
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,2000);
 
-function nextSlide(){
-    slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].className = 'slide showing';
-}

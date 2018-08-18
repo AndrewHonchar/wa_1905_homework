@@ -1,0 +1,283 @@
+@import "../styles/mixins";
+
+.car-content {
+  width: 100%;
+  max-width: 1440px;
+  height: 680px;
+  margin: 0 auto;
+  border-bottom: 1px solid #d0d4d8;
+  @include mobile {
+    display: none;
+  }
+  &__header {
+    width: 100%;
+    max-width: 315px;
+    height: 38px;
+    margin: 0 auto;
+    font-family: Georgia;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4e5665;
+  }
+  &__icon {
+    width: 17px;
+    height: 12px;
+    background-color: #f6cd35;
+  }
+  &__header-text {
+    width: 100%;
+    max-width: 165px;
+    height: 28px;
+    margin: 10px auto;
+    font-family: Avenir Next;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: #ecb84c;
+  }
+  &__image {
+    width: 100%;
+    max-width: 1170px;
+    height: 330px;
+    margin: 80px auto 60px auto;
+    box-shadow: 0 7px grey;
+  }
+  &__description {
+    width: 100%;
+    max-width: 970px;
+    height: 112px;
+    margin: 30px auto;
+    font-family: Avenir Next;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: #505050;
+  }
+}
+
+.hover-point__bonnet {
+  width: 32px;
+  height: 32px;
+  background-color: #ecb84c;
+  border-radius: 50%;
+  opacity: 0.9;
+  position: absolute;
+  margin: 126px auto 0 130px;
+  &-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffd600;
+    border-radius: 50%;
+    position: absolute;
+    margin: 11px auto 0 11px;
+  }
+}
+.hover-point__door {
+  width: 32px;
+  height: 32px;
+  background-color: #ecb84c;
+  border-radius: 50%;
+  opacity: 0.9;
+  position: absolute;
+  margin: 126px auto 0 500px;
+  &-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffd600;
+    border-radius: 50%;
+    position: absolute;
+    margin: 11px auto 0 11px;
+  }
+}
+.hover-point__roof {
+  width: 32px;
+  height: 32px;
+  background-color: #ecb84c;
+  border-radius: 50%;
+  opacity: 0.9;
+  position: absolute;
+  margin: 70px auto 0 770px;
+  &-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffd600;
+    border-radius: 50%;
+    position: absolute;
+    margin: 11px auto 0 11px;
+  }
+}
+.hover-point__wheel {
+  width: 32px;
+  height: 32px;
+  background-color: #ecb84c;
+  border-radius: 50%;
+  opacity: 0.9;
+  position: absolute;
+  margin: 283px auto 0 845px;
+  &-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffd600;
+    border-radius: 50%;
+    position: absolute;
+    margin: 11px auto 0 11px;
+  }
+}
+.hover-point__bonnet:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
+  .dropdown__bonnet {
+    display: block;
+  }
+}
+
+.hover-point__door:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
+  .dropdown__door {
+    display: block;
+  }
+}
+
+.hover-point__roof:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
+  .dropdown__roof {
+    display: block;
+  }
+}
+
+.hover-point__wheel:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
+  .dropdown__wheel {
+    display: block;
+  }
+}
+
+.dropdown__bonnet {
+  display: none;
+  width: 80px;
+  height: 28px;
+  margin: -140px 0 0 -190px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: normal ;
+  font-family: Avenir Next;
+  color: black;
+}
+
+.dropdown__door {
+  display: none;
+  width: 80px;
+  height: 28px;
+  margin: -140px 0 0 140px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: normal ;
+  font-family: Avenir Next;
+  color: black;
+}
+
+.dropdown__wheel {
+  display: none;
+  width: 80px;
+  height: 28px;
+  margin: -240px 0 0 255px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: normal ;
+  font-family: Avenir Next;
+  color: black;
+}
+
+.dropdown__roof {
+  display: none;
+  width: 180px;
+  height: 28px;
+  margin: -135px 0 0 140px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: normal ;
+  font-family: Avenir Next;
+  color: black;
+}
+
+.bonnet-line {
+  margin: 70px 57.5px auto;
+  width: 170px;
+  height: 1px;
+  transform: rotate(45deg);
+  background-color: #ecb84c;
+  transition: 0.5s;
+  &__h {
+    margin: -61px auto 0 -7px;
+    width: 90px;
+    height: 1px;
+    background-color: #ecb84c;
+    transition: 0.5s;
+  }
+}
+
+.door-line {
+  margin: 70px 0 0 -145px;
+  width: 170px;
+  height: 1px;
+  transform: rotate(-45deg);
+  background-color: #ecb84c;
+  transition: 0.5s;
+  &__h {
+    margin: -61px 0 0 0;
+    width: 90px;
+    height: 1px;
+    background-color: #ecb84c;
+    transition: 0.5s;
+  }
+}
+
+.wheel-line {
+  margin: 121px 0 0 -281px;
+  width: 309px;
+  height: 1px;
+  transform: rotate(-45deg);
+  background-color: #ecb84c;
+  transition: 0.5s;
+  &__h {
+    margin: -111px auto 0 -17px;
+    width: 90px;
+    height: 1px;
+    background-color: #ecb84c;
+    transition: 0.5s;
+  }
+}
+
+.roof-line {
+  margin: 65px 0 0 -146px;
+  width: 170px;
+  height: 1px;
+  transform: rotate(-45deg);
+  background-color: #ecb84c;
+  transition: 0.5s;
+  &__h {
+    margin: -61px auto 0 -1px;
+    width: 190px;
+    height: 1px;
+    background-color: #ecb84c;
+    transition: 0.5s;
+  }
+}

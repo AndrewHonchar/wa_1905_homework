@@ -1,0 +1,103 @@
+@import "../styles/mixins";
+
+.footer {
+  width: 100%;
+  max-width: 1440px;
+  height: 360px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  border-top: 1px solid #d0d4d8;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+    margin: -180px 0;
+  }
+}
+
+.footer-header {
+  width: 147px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.footer-name {
+  width: 147px;
+  height: 46px;
+  margin: 54px 0 40px 0;
+  font-family: Avenir Next;
+  font-size: 34px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #37c491;
+  @include mobile {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.money-change {
+  width: 140px;
+  height: 30px;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  border: solid 1px #d9dde1;
+  text-align: center;
+  font-size: 18px;
+  @include mobile {
+    display: none;
+  }
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  height: 224px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 auto;
+  color: #505050;
+  font-size: 14px;
+  font-family: Avenir Next;
+  font-weight: normal;
+  line-height: 1.5;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 auto;
+    color: #505050;
+    font-size: 10px;
+    font-family: Avenir Next;
+    font-weight: normal;
+    line-height: 1;
+  }
+  &__info {
+    text-align: left;
+    align-items: left;
+  }
+  &__rights {
+    margin: 90px auto;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    font-family: Avenir Next;
+  }
+  .footer-content__info-header {
+    font-size: 15px;
+    font-family: Avenir Next;
+    color: #4e5665;
+    font-weight: normal;
+    @include mobile {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

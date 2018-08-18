@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 384);
+/******/ 	return __webpack_require__(__webpack_require__.s = 385);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9096,38 +9096,39 @@ module.exports = function (regExp, replace) {
 /* 381 */,
 /* 382 */,
 /* 383 */,
-/* 384 */
+/* 384 */,
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(385);
+module.exports = __webpack_require__(386);
 
 
 /***/ }),
-/* 385 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(386);
+__webpack_require__(387);
 
 __webpack_require__(353);
 
-var _accordion = __webpack_require__(387);
+var _accordion = __webpack_require__(388);
 
 var accordion = new _accordion.Accordion(document.querySelector('#accordion1'));
 var accordion2 = new _accordion.Accordion(document.querySelector('#accordion2'));
 var accordion3 = new _accordion.Accordion(document.querySelector('#accordion3'));
 
 /***/ }),
-/* 386 */
+/* 387 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 387 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
